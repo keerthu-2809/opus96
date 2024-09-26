@@ -14,6 +14,54 @@
   }
 }
 
+.custom-border {
+  border-width: 3px; /* Set your desired thickness */
+  border-style: solid;
+  border-radius: 10px;
+  padding: 5px;
+  border-image: linear-gradient(260deg,  #7B4B3A, #FFD700,#7B4B3A ,#FFD700) 1;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #e504af,#7f48bb, #04e5de); /* Your gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient_2 {
+  background: linear-gradient(90deg, #eee5b6, #FFD700, #7B4B3A,#f0e29b ,#FFD700, #7B4B3A ); /* Your gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.center-div {
+    width: 50%; /* or any width you prefer */
+    margin: 0 auto; /* horizontally centers the div */
+}
+
+.button-gradient_2 {
+  transition: background-color 0.3s ease;
+}
+
+.button-gradient_2:hover {
+  background-color: #3b82f6; /* Change to your desired hover color */
+}
+
+.button-gradient_2 {
+  background: linear-gradient(90deg, #eee5b6, #FFD700, #f0e29b, #FFD700, #7B4B3A);
+  border: none; /* Remove default button borders */
+  color: black; /* Set text color */
+  padding: 12px 24px; /* Adjust padding */
+  font-size : large;
+  font:bolder;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Make it look clickable */
+}
+
+.text-gradient_1 {
+  background: linear-gradient(90deg, #1da5db,#9f77c9, #04e5de); /* Your gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 body {
   color: var(--foreground);
   background: var(--background);
