@@ -1,7 +1,7 @@
 "use client"; // Marking this file as a Client Component
 
 import { useState } from 'react';
-import { FaInstagram, FaWhatsapp, FaFacebookF, FaEnvelope } from 'react-icons/fa';
+
 
 export default function RootLayout({
   children,
@@ -130,7 +130,7 @@ export default function RootLayout({
       </ul>
 
       <h2 className="text-lg font-semibold mt-4">Log Files</h2>
-      <p>Urbanriseopus96 follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+      <p>Urbanriseopus96 follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&apos; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&apos; movement on the website, and gathering demographic information.</p>
 
 
 
@@ -151,7 +151,7 @@ export default function RootLayout({
 
 <h2 className="text-lg font-semibold mt-4" >Third Party Privacy Policies</h2>
 
-<p>Urbanriseopus96's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. </p>
+<p>Urbanriseopus96&apos;s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. </p>
 
       {/* Additional sections as needed... */}
       <button onClick={togglePrivacy} className="mt-4 text-red-500">
@@ -166,14 +166,14 @@ export default function RootLayout({
               <h2 className="text-2xl font-bold mb-4">Terms of Service</h2>
               {/* Add your Terms of Service content here */}
               <h1 className="text-xl mb-2">Terms of Service for urbanriseopus96</h1>
-              <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
+              <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers&apos; respective websites.</p>
 
 <h2 className="text-lg font-semibold mt-4">CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
 
 <p>Under the CCPA, among other rights, California consumers have the right to:</p>
-<p>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
+<p>Request that a business that collects a consumer&apos;s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
 <p>Request that a business delete any personal data about the consumer that a business has collected.</p>
-<p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p>
+<p>Request that a business that sells a consumer&apos;s personal data, not sell the consumer&apos;s personal data.</p>
 <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
 
 <h2 className="text-lg font-semibold mt-4">GDPR Data Protection Rights</h2>
@@ -187,7 +187,7 @@ export default function RootLayout({
 <p>The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
 <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
 
-<h2 className="text-lg font-semibold mt-4">Children's Information</h2>
+<h2 className="text-lg font-semibold mt-4">Children&apos;s Information</h2>
 
 <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
               {/* Continue your terms of service content... */}
