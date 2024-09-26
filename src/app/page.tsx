@@ -62,13 +62,14 @@ export default function HomePage() {
         'c2VZMcwLQdnUsq0Qc' // Ensure this is your actual User ID
       )
       .then((result) => {
+        console.log("Email sent successfully:", result); // Log the result
         toast.success("Thanks for connecting with us ... we will get back with best properties!");
         setFormData({ name: '', email: '', phone: '' });
       }, (error) => {
+        console.error("Error sending email:", error); // Log the error
         toast.error("Error sending email.");
       });
     }
-  };
 
   return (
     <section className="bg-black text-white lg:w-screen lg:h-screen sm:w-[1085px] sm:h-[1300px] flex items-center justify-center">
@@ -125,7 +126,7 @@ export default function HomePage() {
           Discover more with us!
           </h6>
           <h6 className="text-gradient_2 font-bold lg:text-[20px] lg:ml-[-20px] sm:text-[35px] sm:ml-[-110px]">
-          We're here to provide expert guidance along the way..
+          We&apos;re here to provide expert guidance along the way..
           </h6>
           <p className="font-bold lg:text-[18px] lg:ml-[10px] lg:mt-[15px] sm:text-[25px] sm:mt-[10px] sm:ml-[-70px]">For more Updates.</p>
 
