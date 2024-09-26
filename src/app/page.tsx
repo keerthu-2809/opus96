@@ -71,7 +71,11 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
     <section className="bg-black text-white lg:w-screen lg:h-screen sm:w-[985px] sm:h-[1300px] flex items-center justify-center">
+=======
+    <section className="bg-black text-white lg:w-screen lg:h-screen sm:w-[1085px] sm:h-[1300px] flex items-center justify-center">
+>>>>>>> 673d1bc672ca5f7b9b057b9f434a5febf429702f
       <div className="bg-black text-white lg:w-[520px]  sm:w-[1550px] lg:h-[40vh] sm:h-[50vh] sm:mt-[-750px] lg:mt-[-350px] sm:ml-[2480px] lg:ml-[520px] ">
         <img 
           src="/images/logo.png"  
