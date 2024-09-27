@@ -62,9 +62,11 @@ export default function HomePage() {
         'c2VZMcwLQdnUsq0Qc'
       )
       .then((result) => {
+        console.log("Email sent successfully:", result);
         toast.success("Thanks for connecting with us ... we will get back with best properties!");
         setFormData({ name: '', email: '', phone: '' });
       }, (error) => {
+        console.error("Error sending email:", error);
         toast.error("Error sending email.");
       });
     }
