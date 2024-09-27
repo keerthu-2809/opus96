@@ -59,144 +59,133 @@ export default function HomePage() {
           from_email: formData.email,
           phone_number: formData.phone,
         },
-        'c2VZMcwLQdnUsq0Qc' // Ensure this is your actual User ID
+        'c2VZMcwLQdnUsq0Qc'
       )
       .then((result) => {
-        console.log("Email sent successfully:", result); // Log the result
         toast.success("Thanks for connecting with us ... we will get back with best properties!");
         setFormData({ name: '', email: '', phone: '' });
       }, (error) => {
-        console.error("Error sending email:", error); // Log the error
         toast.error("Error sending email.");
       });
     }
-    
+  };
 
   return (
-    <section className="bg-black text-white lg:w-screen lg:h-screen sm:w-[985px] sm:h-[1300px] flex items-center justify-center">
-      <div className="bg-black text-white lg:w-[520px]  sm:w-[1550px] lg:h-[40vh] sm:h-[50vh] sm:mt-[-750px] lg:mt-[-350px] sm:ml-[2480px] lg:ml-[520px] ">
+    <section className="bg-black text-white flex items-center justify-center lg:w-[1350px] lg:h-[100vh] sm:w-[725px] sm:h-[50vh]">
+      <div className="bg-black text-white lg:mt-[-80px] lg:w-[520px] sm:w-[1550px] lg:h-[40vh] sm:h-[50vh] sm:mt-[-480px] sm:ml-[-100px] flex items-center justify-center">
         <img 
           src="/images/logo.png"  
           alt="Logo Description" 
-          className="lg:w-[480px] sm:w-[320px] lg:h-[40vh] sm:h-[25vh] lg:ml-[740px] sm:ml-[860px] lg:mt-[-20px] object-cover"  
+          className="lg:w-[480px] sm:w-[220px] lg:h-auto sm:h-[15vh] object-cover"  
         />
       </div>
 
-      <div className="bg-white lg:w-[1110px] sm:w-[815px] lg:h-[90vh] sm:h-[35vh] lg:p-6 sm:p-6 lg:mt-[350px] sm:mt-[-300px] rounded-2xl sm:mr-[3320px] lg-mr-[720px] ">
-        <div className="bg-white lg:w-[150px] lg:h-[78vh] lg:p-6 lg:mt-[10px]  mr-auto rounded-2xl custom-border flex justify-between items-center">
-          <div className="bg-white lg:w-[1053px] sm:w-[760px] sm:h-[30vh] lg:h-[80vh] lg:p-4 lg:mt-[10px] lg:mr-auto rounded-2xl custom-border flex justify-between items-center">
-            <div className="bg-white lg:w-[1053px] sm:w-[400px] lg:h-[60vh]  sm:h-[25vh] lg:p-4 sm:p-4 rounded-2xl flex justify-between items-center">
-              {/* Left GIF */}
+      <div className="bg-white lg:w-[810px] sm:w-[895px] lg:h-[90vh] sm:h-auto lg:p-6 sm:p-6  lg:mr-[65px] rounded-2xl">
+        <div className="bg-white lg:w-full lg:h-[78vh] lg:p-6 mr-auto rounded-2xl custom-border flex flex-col lg:flex-row">
+          <div className="bg-white lg:w-[450px] lg:h-[70vh] sm:w-[320px] sm:h-auto flex justify-center items-center">
+            <img 
+              src="/images/gifmaker_me.gif"  
+              alt="Your GIF description"
+              className="lg:w-[480px] lg:h-[70vh] sm:w-full sm:h-auto"
+            />
+          </div>
+          <div className="flex flex-col items-center lg:ml-6">
+            <div className="bg-black lg:w-[380px] sm:w-[260px] lg:h-[40vh] sm:h-[14vh] rounded-2xl overflow-hidden">
               <img 
-                src="/images/gifmaker_me.gif"  
-                alt="Your GIF description"
-                className="lg:w-[450px] lg:h-[70vh] sm:w-[320px] sm:h-[28vh]"
+                src="/images/tile.jpeg"
+                alt="Tile Description" 
+                className="lg:w-full lg:h-[45vh] sm:w-full sm:h-auto object-cover"  
               />
             </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-black lg:w-[480px] sm:w-[260px] lg:h-[40vh] sm:h-[14vh] sm:mt-[-10px] sm:ml-[30px] lg:p-4 rounded-2xl object-cover">
-                <img 
-                  src="/images/tile.jpeg"
-                  alt="Tile Description" 
-                  className="lg:w-full lg:h-[45vh]  sm:w-[255px] sm:h-[14vh] object-flex"  
-                />
-              </div>
-              <h3 className="text-gradient font-bold lg:text-[30px] sm:text-[21px] lg:mt-[20px] sm:mt-[20px]  sm:ml-[25px] justify-center">
-              Bookings are open now ! schedule site visit
-              </h3>
-            </div>
+            <h3 className="text-gradient font-bold lg:text-[30px] sm:text-[21px] mt-4 text-center">
+              Bookings are open now! Schedule site visit
+            </h3>
           </div>
         </div>
 
-        <div className="bg-black lg:w-[1300px] sm:w-[820px] lg:h-[50vh] lg:p-6 sm:p-2 rounded-2xl lg:mt-[45px] sm:mt-[25px] sm:mr-[100px] lg:ml-[-80px]">
-          <h3 className="text-gradient_1 font-bold text-[45px] lg:mt-[20px] lg:ml-[380px] sm:mt-[10px] sm:ml-[160px]">
-            96 - ACRE MEGA  
+        <div className="bg-black lg:w-[1350px] lg:mt-[79px]  lg:ml-[-500px] sm:w-full lg:h-auto lg:p-6 rounded-2xl ">
+          <h3 className="text-gradient_1 font-bold text-[45px] text-center mt-4">
+            96 - ACRE MEGA INTEGRATED TOWNSHIP
           </h3>
-          <h3 className="text-gradient_1 font-bold text-[45px] lg:ml-[260px] sm:ml-[80px]">
-            INTEGRATED TOWNSHIP
-          </h3>
-          <p className="font-bold text-[18px] lg:mt-[25px] lg:ml-[30px] sm:ml-[-60px] sm:mt-[20px]">
+          <p className="font-bold text-[18px] lg:mt-6 text-center mx-4">
             Experience the ultimate blend of Glamour and Luxury, crafted by South India’s Largest Real Estate Developer. Stay tuned for exciting updates as we unveil more about this exclusive opportunity, bringing you closer to a life of luxury and distinction.
           </p>
-          
         </div>
 
-        <div className="bg-black lg:w-[1300px] lg:h-[80vh] sm:w-[1200px] sm:h-[60vh] lg:p-6 sm:p-6 rounded-2xl lg:ml-[-80px]">
-          <hr className="border-t-1 border-gray-300 lg:my-1 sm:my-2 sm:ml-[-80px] sm:w-[900px]" />
-          <h6 className="text-gradient_2 font-bold lg:text-[20px] lg:mt-[35px] lg:ml-[-20px] sm:text-[35px] sm:mt-[10px] sm:ml-[-110px]">
-          Discover more with us!
+        <div className="bg-black lg:w-[1350px] lg:ml-[-500px] sm:w-full lg:h-auto sm:h-auto lg:p-6 rounded-2xl lg:mt-[-10px]">
+          <hr className="border-t-1 border-gray-300 lg:my-4 sm:my-2" />
+          <h6 className="text-gradient_2 font-bold lg:text-[20px] text-center lg:mt-6 sm:text-[35px]">
+            Discover more with us!
           </h6>
-          <h6 className="text-gradient_2 font-bold lg:text-[20px] lg:ml-[-20px] sm:text-[35px] sm:ml-[-110px]">
-          We&apos;re here to provide expert guidance along the way..
+          <h6 className="text-gradient_2 font-bold lg:text-[20px] text-center">
+            We&apos;re here to provide expert guidance along the way..
           </h6>
-          <p className="font-bold lg:text-[18px] lg:ml-[10px] lg:mt-[15px] sm:text-[25px] sm:mt-[10px] sm:ml-[-70px]">For more Updates.</p>
+          <p className="font-bold lg:text-[18px] text-center mt-2">For more Updates.</p>
 
-          <div className=" bg-black container flex sm:w-full">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:mt-4">
+            {/* Video Section */}
+            <div className="bg-black lg:w-[720px] sm:w-full">
+              <video
+                className="bg-black lg:w-[1000px] lg:h-[45vh] sm:w-full sm:h-auto"
+                muted
+                autoPlay
+                loop
+              >
+                <source src="/images/opus.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
             {/* Form Section */}
-            <div className="relative custom-border bg-black lg:w-[580px] sm-w-[900px] lg:h-[65vh] sm:mt-[490px] lg:p-6 rounded-2xl lg:ml-[790px] lg:mt-[-80px] overflow-hidden">
+            <div className="relative custom-border bg-black lg:w-[580px] sm:w-full lg:h-[65vh] lg:p-6 rounded-2xl overflow-hidden lg:ml-4">
               <img 
                 src="/images/form.jpeg"  
                 alt="Form Background" 
-                className="absolute top-0 left-0 w-[540px] h-[65vh] object-flex"  
+                className="absolute top-0 left-0 w-full h-full flex"  
               />
-              <form className="relative z-10 text-white" onSubmit={handleSubmit}>
-                <label className="text-gradient_2 block mb-4 ml-[30px] mt-[25px]">Name:</label>
+              <form className="relative z-10 text-white p-4" onSubmit={handleSubmit}>
+                <label className="text-gradient_2 block mb-2">Name:</label>
                 <input 
                   type="text" 
                   name="name"
-                  className="w-[380px] bg-transparent ml-[25px] border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-6" 
+                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
                   placeholder="Enter your name" 
                   value={formData.name}
                   onChange={handleChange}
                 />
-                {errors.name && <p className="text-red-500 ml-[25px]">{errors.name}</p>}
+                {errors.name && <p className="text-red-500">{errors.name}</p>}
 
-                <label className="text-gradient_2 block mb-4 ml-[25px]">Email:</label>
+                <label className="text-gradient_2 block mb-2">Email:</label>
                 <input 
                   type="email" 
                   name="email"
-                  className="w-[380px] bg-transparent border-b ml-[25px] border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-6" 
+                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
                   placeholder="Enter your email" 
                   value={formData.email}
                   onChange={handleChange}
                 />
-                {errors.email && <p className="text-red-500 ml-[25px]">{errors.email}</p>}
+                {errors.email && <p className="text-red-500">{errors.email}</p>}
 
-                <label className="text-gradient_2 block mb-4 ml-[25px]">Phone Number :</label>
+                <label className="text-gradient_2 block mb-2">Phone Number:</label>
                 <input 
                   type="tel" 
                   name="phone"
-                  className="w-[380px] bg-transparent border-b ml-[25px] border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-6" 
+                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
                   placeholder="Enter your phone number"
                   value={formData.phone}
                   onChange={handleChange} 
                 />
-                {errors.phone && <p className="text-red-500 ml-[25px]">{errors.phone}</p>}
+                {errors.phone && <p className="text-red-500">{errors.phone}</p>}
 
-                <button type="submit" className="button-gradient_2 px-4 py-2 w-[200px] ml-[105px] mt-[10px] rounded-2xl">
-          Stay tuned
-        </button>
-        <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} closeOnClick draggable pauseOnHover />
-      </form>
+                <button type="submit" className="button-gradient_2 px-4 py-2 w-full mt-2 rounded-2xl">
+                  Stay tuned
+                </button>
+                <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} closeOnClick draggable pauseOnHover />
+              </form>
             </div>
-
-{/* Video Section Right to Form */}
-<div className=" bg-black lg:ml-[-1090px] sm:ml-[-400px] lg:w-full sm:w-[1500px] ">
-  <video
-    className=" bg-black media lg:w-[1800px] lg:h-[45vh] lg:ml-[-280px] lg:mt-[20px] sm:w-[1200px] sm:mt-[10px] sm:w-[900px]"
-    muted
-    autoPlay
-    loop  // Optional: Add loop if you want the video to repeat
-  >
-    <source src="/images/opus.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
-
           </div>
         </div>
       </div>
     </section>
   );
-}
 }

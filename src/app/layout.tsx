@@ -24,7 +24,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
 
         {/* Footer Section */}
-        <footer className="bg-black text-white py-8 mt-[920px]">
+        <footer className="bg-black text-white py-8 lg:mt-[720px]">
           <p className="ml-[120px] mt-[-10px] text-[20px] text-white opacity-75 shadow-2xl">
             stay tuned ...
           </p>
