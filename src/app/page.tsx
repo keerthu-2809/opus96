@@ -70,7 +70,6 @@ export default function HomePage() {
         toast.error("Error sending email.");
       });
     }
-  };
 
   return (
     <section className="bg-black text-white flex items-center justify-center lg:w-[1350px] lg:h-[100vh] sm:w-[725px] sm:h-[50vh]">
@@ -119,8 +118,8 @@ export default function HomePage() {
           <h6 className="text-gradient_2 font-bold lg:text-[20px] text-center lg:mt-6 sm:text-[35px]">
             Discover more with us!
           </h6>
-          <h6 className="text-gradient_2 font-bold lg:text-[20px] text-center">
-            We&apos;re here to provide expert guidance along the way..
+          <h6 className="text-gradient_2 font-bold lg:text-[20px] lg:ml-[-20px] sm:text-[35px] sm:ml-[-110px]">
+          We&apos;re here to provide expert guidance along the way..
           </h6>
           <p className="font-bold lg:text-[18px] text-center mt-2">For more Updates.</p>
 
@@ -190,4 +189,5 @@ export default function HomePage() {
       </div>
     </section>
   );
+}
 }
