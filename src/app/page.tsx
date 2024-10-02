@@ -5,7 +5,7 @@ import './globals.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from './logo.png';
-import opus from './opus.mp4';
+import opusGif from './opus.gif';
 import tile from './tile.jpeg';
 import form from './form.jpeg';
 import gifmaker from './gifmaker_me.gif';
@@ -80,11 +80,11 @@ export default function HomePage() {
   return (
     <section className="bg-black text-white flex items-center justify-center lg:w-[1350px] lg:h-[100vh] sm:w-[100%] sm:h-[90vh] flex-col">
       {/* Logo Section */}
-      <div className="bg-black text-white lg:mt-[30px] lg:w-[520px] lg:mt-[60px] sm:w-[50%] lg:h-[180vh] sm:mr-[60px]  sm:mt-[-70px] sm:h-[30vh] flex items-center justify-center sm:mt-[-50px]">
+      <div className="bg-black text-white lg:mt-[25px] lg:w-[520px] lg:mt-[60px] sm:w-[50%] lg:h-[180vh] sm:mr-[60px]  sm:mt-[-320px] sm:h-[30vh] flex items-center justify-center sm:mt-[-50px]">
         <img 
           src={logo.src} 
           alt="Logo Description" 
-          className="lg:w-[260px] sm:w-[280px] lg:h-[35vh] lg:mt-[-10px] sm:h-auto object-cover"  
+          className="lg:w-[260px] sm:w-[280px] lg:h-[35vh] lg:mt-[-58px] sm:h-[25vh] sm:mt-[-68px] object-cover"  
         />
       </div>
 
@@ -92,7 +92,7 @@ export default function HomePage() {
       <div className="bg-white lg:w-[990px] sm:w-[80%] sm:mr-[20px] sm:mt-[-70px] lg:h-[70vh] sm:h-[40vh] lg:p-6 sm:p-4 lg:mr-[45px] lg:mt-[-10px] rounded-2xl">
         <div className="bg-white lg:w-full lg:h-[60vh] sm:h-[35vh]  lg:p-6 rounded-2xl custom-border flex flex-col lg:flex-row">
           {/* GIF Section */}
-          <div className="bg-white lg:w-[500px] sm:w-[50%]  lg:mt-[65px] lg:h-[40vh] sm:w-[200px] sm:h-[35vh] flex justify-center items-center">
+          <div className="bg-white lg:w-[500px] sm:w-[50%]  lg:mt-[30px] lg:h-[40vh] sm:w-[200px] sm:h-[35vh] flex justify-center items-center">
             <img 
               src={gifmaker.src}  
               alt="Your GIF description"
@@ -126,21 +126,65 @@ export default function HomePage() {
 
         {/* Video & Form Section */}
         <div className="bg-black lg:w-[1350px] lg:ml-[-190px] sm:w-[720px] sm:mt-[2px] sm:ml-[-70px] lg:h-auto sm:h-[350px] lg:p-6 rounded-2xl lg:mt-[-10px]">
-  <div className="flex flex-col lg:flex-row lg:justify-between lg:mt-4">
-    {/* Video Section */}
-    <div className="bg-black lg:w-[720px] sm:w-full">
-      <video
-        className="bg-black w-full lg:h-[45vh] sm:h-[30vh]"
-        muted
-        autoPlay
-        loop
-      >
-        <source src={opus} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:mt-4">
+            {/* Video Section */}
+            <div className="bg-black lg:w-[720px] sm:w-[100%]">
+  <img
+    src={opusGif.src} // Reference to your GIF file
+    className="bg-black lg:w-[1000px] lg:h-[60vh] sm:w-full sm:h-[30vh] object-cover" 
+    alt="Description of your GIF"
+    loading="lazy" 
+  />
 </div>
+
+            {/* Form Section */}
+            <div className="relative custom-border bg-black lg:w-[580px] sm:w-[100%] lg:h-[65vh] lg:p-6 rounded-2xl overflow-hidden lg:ml-4 sm:mt-4">
+              <img 
+                src={form.src} 
+                alt="Form Background" 
+                className="absolute top-0 left-0 w-full h-full flex"  
+              />
+              <form className="relative z-10 text-white p-4" onSubmit={handleSubmit}>
+                <label className="text-gradient_2 block mb-2">Name:</label>
+                <input 
+                  type="text" 
+                  name="name"
+                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
+                  placeholder="Enter your name" 
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                {errors.name && <p className="text-red-500">{errors.name}</p>}
+
+                <label className="text-gradient_2 block mb-2">Email:</label>
+                <input 
+                  type="email" 
+                  name="email"
+                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
+                  placeholder="Enter your email" 
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && <p className="text-red-500">{errors.email}</p>}
+
+                <label className="text-gradient_2 block mb-2">Phone Number:</label>
+                <input 
+                  type="tel" 
+                  name="phone"
+                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
+                  placeholder="Enter your phone number"
+                  value={formData.phone}
+                  onChange={handleChange} 
+                />
+                {errors.phone && <p className="text-red-500">{errors.phone}</p>}
+
+                <button type="submit" className="button-gradient_2 text-white rounded-md p-2 w-full mt-4">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
 
         <ToastContainer />
       </div>
