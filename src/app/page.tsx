@@ -126,68 +126,21 @@ export default function HomePage() {
 
         {/* Video & Form Section */}
         <div className="bg-black lg:w-[1350px] lg:ml-[-190px] sm:w-[720px] sm:mt-[2px] sm:ml-[-70px] lg:h-auto sm:h-[350px] lg:p-6 rounded-2xl lg:mt-[-10px]">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:mt-4">
-            {/* Video Section */}
-            <div className="bg-black lg:w-[720px] sm:w-[100%]">
-              <video
-                className="bg-black lg:w-[1000px] lg:h-[45vh] sm:w-full sm:h-[30vh]"
-                muted
-                autoPlay
-                loop
-              >
-                <source src={opus} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-
-            {/* Form Section */}
-            <div className="relative custom-border bg-black lg:w-[580px] sm:w-[100%] lg:h-[65vh] lg:p-6 rounded-2xl overflow-hidden lg:ml-4 sm:mt-4">
-              <img 
-                src={form.src} 
-                alt="Form Background" 
-                className="absolute top-0 left-0 w-full h-full flex"  
-              />
-              <form className="relative z-10 text-white p-4" onSubmit={handleSubmit}>
-                <label className="text-gradient_2 block mb-2">Name:</label>
-                <input 
-                  type="text" 
-                  name="name"
-                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
-                  placeholder="Enter your name" 
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-                {errors.name && <p className="text-red-500">{errors.name}</p>}
-
-                <label className="text-gradient_2 block mb-2">Email:</label>
-                <input 
-                  type="email" 
-                  name="email"
-                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
-                  placeholder="Enter your email" 
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <p className="text-red-500">{errors.email}</p>}
-
-                <label className="text-gradient_2 block mb-2">Phone Number:</label>
-                <input 
-                  type="tel" 
-                  name="phone"
-                  className="w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition-all duration-300 mb-4" 
-                  placeholder="Enter your phone number"
-                  value={formData.phone}
-                  onChange={handleChange} 
-                />
-                {errors.phone && <p className="text-red-500">{errors.phone}</p>}
-
-                <button type="submit" className="button-gradient_2 text-white rounded-md p-2 w-full mt-4">
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+  <div className="flex flex-col lg:flex-row lg:justify-between lg:mt-4">
+    {/* Video Section */}
+    <div className="bg-black lg:w-[720px] sm:w-full">
+      <video
+        className="bg-black w-full lg:h-[45vh] sm:h-[30vh]"
+        muted
+        autoPlay
+        loop
+      >
+        <source src={opus} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
 
         <ToastContainer />
       </div>
