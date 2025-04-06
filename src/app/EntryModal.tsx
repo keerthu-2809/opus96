@@ -3,7 +3,25 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 
-export default function EntryModal({ onClose, formData, handleChange, handleSubmit, errors }: any) {
+type EntryModalProps = {
+  onClose: () => void;
+  formData: {
+    [key: string]: string; // or you can define exact fields like name, email, etc.
+  };
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  errors: {
+    [key: string]: string;
+  };
+};
+
+export default function EntryModal({
+  onClose,
+  formData,
+  handleChange,
+  handleSubmit,
+  errors,
+}: EntryModalProps) {
   const [showModal, setShowModal] = useState(true);
 
   const handleSkip = () => {
