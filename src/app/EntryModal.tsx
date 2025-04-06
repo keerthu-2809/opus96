@@ -1,6 +1,6 @@
 // EntryModal.tsx
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { signIn } from "next-auth/react";
 
 export default function EntryModal({ onClose, formData, handleChange, handleSubmit, errors }: any) {
