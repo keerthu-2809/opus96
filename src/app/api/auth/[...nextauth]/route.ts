@@ -1,7 +1,16 @@
-// src/app/api/auth/[...nextauth]/route.ts
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import pool from "@/lib/db";
+import { DefaultSession } from "next-auth"; // ✅ Required for type merging
+
+// ✅ Module augmentation to add `id` to session.user
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id: string;
+    } & DefaultSession["user"];
+  }
+}
 
 const handler = NextAuth({
   providers: [
@@ -14,7 +23,6 @@ const handler = NextAuth({
     async signIn({ user }) {
       const { name, email, image } = user;
 
-      // Store user in DB manually if not exists
       await pool.query(
         `
         INSERT INTO users (name, email, image)
@@ -28,14 +36,13 @@ const handler = NextAuth({
     },
 
     async session({ session }) {
-      // Optionally fetch user ID or other info
       const result = await pool.query(
         `SELECT id FROM users WHERE email = $1`,
         [session.user?.email]
       );
 
-      if (result.rows.length) {
-        (session.user as any).id = result.rows[0].id;
+      if (result.rows.length && session.user) {
+        session.user.id = result.rows[0].id;
       }
 
       return session;
