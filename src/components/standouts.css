@@ -1,0 +1,131 @@
+
+.div2 {
+    position: relative;
+    display: flex;
+    font-weight: 900;
+    font-size: 19px;
+    flex-direction: column; /* stack children vertically */
+    align-items: center;     /* center horizontally */
+    justify-content: flex-start; /* align to top */
+    height: 500px;
+    padding-top: -5px; /* optional: give some space from top */
+    background: linear-gradient(360deg, #f6f8f8, #f6f8f8, #36393b, #11076b, #31454d, #a5acad, #fafbfc, #fafbfc);
+    color: rgb(14, 4, 1);
+    overflow: hidden;
+  }
+
+  .gradient_header_with_bar {
+    position: relative;
+    display: inline-block;
+  }
+
+  .slider-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px auto;
+    width: 150%;
+    max-width: 1200px;
+    position: relative;
+  }
+
+  .slider-button {
+    font-size: 10rem;
+    background: linear-gradient(to right, #ebb520, #f0ec0a, #b8914a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for other browsers */
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .card-slider-wrapper {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .card-slide {
+    flex: 50px 50px 280px;
+    position: relative;
+  }
+
+  .card-image-container {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .card-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .card-slide-image:hover {
+    transform: scale(1.05);
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    font-size: 20px;
+    font-weight:600;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+  
+  /* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .div2 {
+      height: auto;
+      padding: 20px 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    .slider-section {
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+      margin: 20px auto;
+    }
+  
+    .slider-button {
+      font-size: 7rem;
+    }
+  
+    .card-slider-wrapper {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px 5px;
+      width: 100%;
+    }
+  
+    .card-slide {
+      flex: 0 0 85%;
+      max-width: 85%;
+    }
+  
+    .card-image-container {
+      height: 250px;
+    }
+  
+    .card-overlay {
+      font-size: 16px;
+      left: 10px;
+      bottom: 15px;
+    }
+  
+    .gradient_header_with_bar h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

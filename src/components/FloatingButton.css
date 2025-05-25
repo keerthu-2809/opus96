@@ -1,0 +1,22 @@
+.floating-btn {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: right;
+    background-color: #0ef1e6;
+    color: rgb(8, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+    border-radius: 4px 4px 0 0;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .floating-btn {
+      display: none;
+    }
+  }

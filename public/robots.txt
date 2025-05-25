@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.urbanriseopus96.site
+
+# Sitemaps
+Sitemap: https://www.urbanriseopus96.site/sitemap.xml

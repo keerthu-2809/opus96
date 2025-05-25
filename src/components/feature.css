@@ -1,0 +1,99 @@
+
+  .features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 300px 150px;
+    height: 80px;
+    margin-top: -90px;
+  }
+
+  .feature-box {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .feature-box img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .feature-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+
+  .feature-subtext {
+    font-size: 14px;
+    color: #fcfcfc;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px 100px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .text-block {
+    flex: 1 1 500px;
+  }
+  
+  .text-block p {
+    font-weight: 400;
+    text-align: justify;
+    color: #f8f5f5;
+    line-height: 1.6;
+  }
+  
+  .image-block {
+    flex: 0 0 400px;
+    display: flex;
+    margin-top: -50px;
+    margin-right: -90px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+
+    .content-wrapper {
+      flex-direction: column;
+      margin: 30px 40px;
+      align-items: center;
+    }
+  
+    .image-block {
+      margin-top: -170px;
+      margin-right: 10px;
+    }
+  
+    .text-block p {
+      padding-right: 0;
+    }
+
+    .features-section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+      gap: 5px;
+      margin: 20px 10px;
+      justify-items: center;
+      height: 400px;
+      width: 240px;
+    }
+  
+    .feature-box {
+      width: 80%;
+      max-width: 80px; /* You can adjust this size */
+      text-align: center;
+    }
+
+   
+  }
+
+ 

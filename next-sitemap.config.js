@@ -1,8 +1,9 @@
-// next-sitemap.config.js
 /** @type {import('next-sitemap').IConfig} */
+
+
 module.exports = {
-    siteUrl: 'https://www.urbanriseopus96.site', // replace with your actual domain
-    generateRobotsTxt: true, // also generate robots.txt
+    siteUrl: 'https://www.urbanriseopus96.site',
+    generateRobotsTxt: true,
     sitemapSize: 7000,
   };
   

@@ -1,0 +1,61 @@
+.child-friendly-page {
+    background-image: url('/images/bg-child-friendly.jpg'); 
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+  }
+  
+  .div-class {
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
+  
+  .gradient_header3 {
+    font-size: 34px;
+    font-weight: 800;
+    background: linear-gradient(to right, #5f41d9, #00b3b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient_header2 {
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(to right, #004aad, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .golden_bar_wrapper {
+    width: 100px;
+    height: 4px;
+    margin: 0 auto;
+  }
+  
+  .golden_bar {
+    height: 4px;
+    background: linear-gradient(to right, gold, orange);
+    width: 100%;
+    border-radius: 2px;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .gradient_header3,
+    .gradient_header2 {
+      font-size: 24px;
+    }
+  
+    .child-friendly-page {
+      padding: 20px;
+    }
+  
+    .div-class {
+      margin: 0 auto 40px auto;
+      width: 100%;
+    }
+  }
+  
