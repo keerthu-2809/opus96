@@ -1,0 +1,138 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 6.5rem;
+    position: relative;
+    height: 10px;
+    width : 290px;
+    margin-left: -350px;
+  }
+  
+  .footer-note {
+    margin-left: 1.5rem;
+    font-size: 20px;
+    opacity: 0.75;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+  }
+  
+  .footer-social-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .footer-social-icons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .social-icon {
+    width: 25px;
+    height: 25px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    opacity: 0.75;
+  }
+  
+  .footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+    gap: 0.75rem;
+  }
+  
+  .footer-link {
+    cursor: pointer;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-separator {
+    margin: 0 0.5rem;
+  }
+  
+  .footer-logo {
+    width: 80px;
+    height: auto;
+    margin-left: auto;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+
+  .modal-close-button {
+    margin-top: 1rem;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      width: 100%;
+      margin-left: 0;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      margin-top: -40px;
+    }
+  
+    .footer-note {
+      font-size: 16px;
+      margin-left: 0;
+    }
+  
+    .footer-social-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+  
+    .footer-social-icons {
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .footer-links {
+      justify-content: center;
+      padding: 1rem 0;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  
+    .footer-logo {
+      margin: 1rem auto 0;
+      display: block;
+    }
+  
+    .modal-content1 {
+      padding: 1rem;
+      width: 90%;
+    }
+  
+    .modal-close-button {
+      font-size: 0.9rem;
+    }
+  }
+  

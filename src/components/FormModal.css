@@ -1,0 +1,77 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    width: 80%;
+    max-width: 550px;
+    height: 500px;
+    overflow-y: auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+}
+
+  .modal-close {
+    position: absolute;
+    color: #f80505;
+    top: 5px;
+    right: 10px;
+    font-size: 1.5rem;
+    background :rgba(247, 245, 245, 0.6) ;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-banner-image {
+    width: 100%;
+    max-height: 220px; /* ✅ reduce from 320px */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+  }
+  
+  .form-popup input {
+    display: block;
+    color: #0f0202;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-popup button {
+    background-color: #004c3f;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .disclaimer1 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #0f0202;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+  }

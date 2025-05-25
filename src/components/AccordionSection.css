@@ -1,0 +1,126 @@
+
+
+.accordion-container2 {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 4rem;
+  margin-left: -40px;
+}
+  
+.accordion-left {
+  flex: 1;
+  max-width: 60%;
+}
+
+.accordion-right1 {
+  flex: 1;
+  max-width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+  .accordion-image {
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+  
+.accordion-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion Styles */
+.accordion-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+  
+  .accordion-header button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #f10505, #cc134b, #b5ff88);
+    color: #0e0101;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .accordion-button.open {
+    background-color: #dceee0;
+    color: #2a6b10;
+  }
+  
+  .accordion-body {
+    padding: 1rem;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+
+  .icon {
+    height: 20px;
+    width: 20px;
+    padding: 0; /* Remove padding that might break alignment */
+  }
+
+  @media (max-width: 768px) {
+    .accordion-container2 {
+      flex-direction: column;
+      padding: 2rem;
+      margin-left: -120px;
+      gap: 1rem;
+    }
+  
+    .accordion-left,
+    .accordion-right {
+      flex: 100% 1 1;
+      width: 100%;
+    }
+   
+    .accordion-right {
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .accordion-right1 {
+      position: static;
+      transform: none;
+      margin: 1rem 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .accordion-image {
+      max-width: 100%;
+      height: auto;
+      max-height: none;
+      border-radius: 10px;
+    }
+  
+    .accordion-header button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .accordion-body {
+      font-size: 0.95rem;
+    }
+  }
+  

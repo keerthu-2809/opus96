@@ -1,0 +1,73 @@
+
+
+.image-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .div4 {
+    margin-left: 80px;
+    margin-top : 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 500px;
+  }
+
+  
+
+  .golden_bar_wrapper {
+    position: relative;
+    height: 5px; /* just enough to make space for the bar */
+    width: 100%;
+  }
+
+  .custom-button {
+    margin-top: 1.5rem;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #346407;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #35d389;
+  }
+  
+  @media (max-width: 768px) {
+    .image-text-wrapper {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 20px;
+      align-items: center;
+    }
+  
+    .div4 {
+      margin-left: 0;
+      margin-top: 20px;
+      align-items: center;
+      text-align: center;
+      max-width: 100%;
+      padding: 0 15px;
+    }
+  
+
+    .custom-button {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      width: 100%;
+      max-width: 300px;
+    }
+
+  }
+  

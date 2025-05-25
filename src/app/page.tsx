@@ -1,103 +1,167 @@
-import Image from "next/image";
+'use client';
+
+import './globals.css';
+import ClientSlider from '@/components/ClientSlider';
+import AccordianSection from '@/components/AccordionSection';
+import '../components/header.css';
+import Image from 'next/image'; // ✅ Import Image here
+import React, { useState } from "react";
+import ManualSlider from '@/components/Slider';
+import SixDivLayout from '@/components/SixDivLayout';
+import ParkSelector from '@/components/ParkSelector';
+import HalfSlider from '@/components/HalfSlider';
+import MapAccordionSection from '@/components/MapAccordionSection';
+import FeatureLayout from '@/components/FeatureLayout';
+import ConnectPage from '@/components/ConnectPage';
+import FooterLayout from '@/components/FooterLayout';
+import PriceConfiguration from '@/components/PriceConfiguration';
+import TambaramSection from '@/components/TambaramSection';
+import ExperienceSection from '@/components/ExperienceSection';
+import FloatingButton from '@/components/FloatingButton';
+import FooterForm from '@/components/FooterForm';
+import LivingExperienceSection from '@/components/LivingExperienceSection';
+import StandoutsPage from '@/components/standouts';
+import NatureSection from '@/components/NatureSection';
+import SchoolInhousePage from '@/components/SchoolInhousePage';
+import ChildFriendlyTownshipPage from '@/components/ChildFriendlyTownshipPage';
+import LifestylePage from '@/components/LifestylePage';
+import BlendPage from '@/components/BlendPage';
+
+const outerWords = [
+  "Sprawling Opus96", "Future Home Awaits", "Exclusive Community", "Luxurious Leisure",
+  "Nature's Haven", "Unmatched Lifestyle Over", "Learning Hub", "Holistic Education"
+];
+
+const overlayWords = [
+  "96 acres of Blissful Living", "3200+ apartments", "900 Luxury villa plots", "4 elegant clubhouses",
+  "8 Lush Green parks", "Over 125+ World-Class Amenities", "Urbanrise Genius for Children", "CBSE School Within the Community"
+];
+
+const overlayColors = [
+  "#ff4c4c",   // Bold - red
+  "#4caf50",   // Fresh - green
+  "#00bcd4",   // Zen - teal
+  "#ff9800",   // Wander - orange
+  "#9c27b0",   // Build - purple
+  "#2196f3",   // Win - blue
+  "#e91e63",   // Vision - pink
+  "#ffc107"    // Glow - amber
+];
+
+
+
+
 
 export default function Home() {
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <ClientSlider />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+     
+      <div className="image-below-slider">
+      <Image
+  src="/images/banner-below-top-bg-Photoroom.png"
+  alt="Corner Icon"
+  width={100}
+  height={60}
+  className="transition-image1"
+/>
+</div>
+<ExperienceSection />
+<div className="card-section-wrapper">
+<div className="card-container">
+  {outerWords.map((outerWord, index) => (
+    <div className="card" key={index}>
+      {/* ➤ Word outside the image */}
+      <div className="card-text">{outerWord}</div>
+
+      <div className="card-image-wrapper">
+        <img
+          src={`/images/card${index + 1}.jpg`}
+          alt={`Card ${index + 1}`}
+          className="card-image"
+        />
+
+        {/* ➤ Overlay word + golden bar inside the image */}
+        <div className="overlay-content1">
+          <div className="overlay-word" style={{ color: overlayColors[index] }}
+          >{overlayWords[index]}</div>
+          <div className="golden_bar" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
+  ))}
+   {/* 🔽 Single image at bottom-right of the whole card container */}
+   <div className="image-right-slider">
+    <Image
+      src="/images/banner-below-bottombg-Photoroom.png"
+      alt="Corner Icon"
+      width={270}
+      height={130}
+      className="transition-image  hide-on-mobile"
+    />
+  </div>
+  </div>
+</div>
+<StandoutsPage/>
+<TambaramSection />
+<LivingExperienceSection />
+<PriceConfiguration />
+
+  <div className='div6'>
+  <h1 style={{ fontSize: 15, fontWeight: 550 }}>Building The Community That Harmonizes</h1>
+  <h1 className="gradient_header2">NATURE AND INNOVATION</h1>
+  <div className="golden_bar_wrapper">
+    <div className="golden_bar"></div>
+    <br /><br />
+    <div className="image-right">
+    <Image
+      src="/images/innovation-bg-Photoroom.png"
+      alt="Corner Icon"
+      width={310}
+      height={100}
+      className="transition-image hide-on-mobile"
+    />
+  </div>
+  </div>
+  
+  <AccordianSection/>
+  
+</div>
+<NatureSection/>
+<ManualSlider />
+<SixDivLayout/>
+ <SchoolInhousePage/>
+  
+    <ChildFriendlyTownshipPage/>
+    <div className="park-section">
+        <br />
+        <h1 className="gradient_header2">PARK AMENITIES</h1>
+        <h1 style={{ fontWeight: 680 , marginLeft : "120px" , marginTop : "20px" }}>RECREATION AND RELAXATION</h1>
+
+        <div className="golden_bar_wrapper">
+          <div className="golden_bar"></div>
+          <br />
+        </div>
+      </div>
+  <ParkSelector />
+  
+  
+  <LifestylePage/> 
+     <HalfSlider/>
+  <BlendPage/>
+  <MapAccordionSection/>
+  <FeatureLayout/>
+  <div id="contact">
+  <ConnectPage/>
+  </div>
+  <FooterLayout/>
+    {/* Floating Button opens the modal */}
+    <FloatingButton />
+
+
+      <FooterForm />
+    </>
   );
 }

@@ -1,0 +1,100 @@
+.main-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #050505;
+    padding: 40px;
+  }
+  
+  .left-menu {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #34e24c;
+  }
+  
+  .menu-item:hover,
+  .menu-item.active {
+    background: #59f373;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+  }
+  
+  .right-content {
+    width: 70%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+  
+  .overlay-content {
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .overlay-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .overlay-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+  
+    /* New Code */
+    columns: 2; /* split into 2 columns */
+    column-gap: 40px; /* space between the columns */
+    max-height: 300px; /* optional: limit the height if needed */
+  }
+  
+  .overlay-content li {
+    margin-bottom: 10px;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .main-wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .left-menu {
+      flex-direction: row;
+      width: 100%;
+      overflow-x: auto;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+  
+    .menu-item {
+      font-size: 18px;
+    }
+  
+    .right-content {
+      width: 100%;
+      min-height: 300px;
+    }
+  }
+  

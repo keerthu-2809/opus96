@@ -1,0 +1,96 @@
+
+.div1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(360deg, #87CEFA, #f6f8f8, #A2DDFE, #A1E9F1, #87CEEB, #B0E0E6, #87CEFA);
+    color: rgb(14, 4, 1);
+    height: 800px;
+    width: 1050px;
+    margin: -120px auto 0 auto; /* ⬅️ top margin added */
+    border-radius: 20px;  
+    overflow: hidden; /* Prevents image from overflowing the div */
+  }
+
+  .top-left-head {
+    position: absolute;
+    top: 100px;
+    left: 50px; /* Use left instead of right for better control */
+    font-size: 18px;
+    font-weight: 750;
+    color: #363535; 
+    text-align: left;
+    letter-spacing: 3px;
+    z-index: 10;
+  }
+
+  .top-right-text {
+    position: absolute;
+    top: 80px;
+    left: 450px;
+    font-weight: 600;
+    text-align: left;
+    color: #0e0401; /* or whatever color fits your theme */
+  }
+  
+  .image-wrapper {
+    object-fit: cover; 
+    width: 100%;
+    height: 50%;
+  }
+
+  .image-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  /* ✅ Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .div1 {
+      width: 90%;
+      height: auto;
+      margin: 20px auto;
+      padding: 20px 10px;
+    }
+  
+    .top-left-head {
+      position: relative;
+      top: auto;
+      left: auto;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .top-right-text {
+      position: relative;
+      top: auto;
+      left: auto;
+      font-weight: 900;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 15px;
+    }
+  
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 250px; /* 👈 Add a fixed height to make the `fill` image work */
+      }
+    
+      .image-bottom {
+        position: relative; /* remove absolute for better stacking */
+        bottom: auto;
+        width: 100%;
+      }
+
+      .image-below-slider {
+        justify-content: left;
+        flex-direction: column; /* Stack vertically on mobile */
+        align-items: left;
+      }
+  }
+  

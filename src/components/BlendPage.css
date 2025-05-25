@@ -1,0 +1,59 @@
+.div8 {
+    padding: 40px 20px;
+    background: linear-gradient(90deg,#030700, #224401, #4b880e, #429c01);
+  }
+  
+  .text-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .blend-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom : -25px;
+  }
+  
+  /* Ensure the image scales on mobile */
+  .blend-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .blend-image {
+      margin-top: 20px !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+  
+    .text-section h1 {
+      font-size: 24px;
+    }
+  
+    .text-section p {
+      font-size: 14px;
+    }
+
+    .image-container {
+        margin-top: 20px; /* Less negative or no negative margin */
+        padding: 0 10px;
+      }
+    
+      .blend-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+  }
+  
+ 
