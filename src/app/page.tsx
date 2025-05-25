@@ -194,7 +194,7 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Existing Website Section — DO NOT MODIFY */}
+      {/* existing Website Section — DO NOT MODIFY */}
       <section className="bg-black text-white flex items-center justify-center lg:w-[1350px] lg:h-[100vh] sm:w-[100%] sm:h-[90vh] flex-col">
         {/* Logo Section */}
         <div className="bg-black text-white lg:mt-[25px] lg:w-[520px] lg:mt-[60px] sm:w-[50%] lg:h-[180vh] sm:mr-[60px]  sm:mt-[-320px] sm:h-[30vh] flex items-center justify-center sm:mt-[-50px]">
