@@ -160,7 +160,6 @@ export default function Home() {
     {/* Floating Button opens the modal */}
     <FloatingButton />
 
-
       <FooterForm />
     </>
   );
