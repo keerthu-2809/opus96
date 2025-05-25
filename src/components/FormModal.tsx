@@ -1,4 +1,3 @@
-// components/FormModal.tsx
 import React from "react";
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
@@ -11,8 +10,7 @@ interface FormModalProps {
 }
 
 const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
+  // ✅ MOVE HOOKS ABOVE CONDITIONAL
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,6 +22,9 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose }) => {
     email: '',
     phone: ''
   });
+
+  // ❌ Hook call below this will be conditional — BAD
+  if (!isOpen) return null;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -72,75 +73,64 @@ const FormModal: React.FC<FormModalProps> = ({ isOpen, onClose }) => {
           console.log("Email sent successfully:", result);
           toast.success("Thanks for connecting with us ... we will get back with best properties!");
   
-          // Reset the form
           setFormData({ name: '', email: '', phone: '' });
-  
-          // Close the modal after a short delay (so toast renders smoothly)
           setTimeout(() => {
             onClose();
-          }, 100); // 100ms delay is enough
+          }, 100);
         }, (error) => {
           console.error("Error sending email:", error);
           toast.error("Error sending email.");
         });
     }
   };
-  
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        
-        {/* Close button */}
         <button className="modal-close" onClick={onClose}>×</button>
 
-        {/* Optional image at the top */}
         <img 
           src="/images/popup_image.jpg" 
           alt="Form Banner" 
           className="form-banner-image" 
         />
 
-        {/* Form */}
         <form className="form-popup" onSubmit={handleSubmit}>
-  <h1>Book Your Site Visit</h1>
+          <h1>Book Your Site Visit</h1>
 
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    value={formData.name}
-    onChange={handleChange}
-  />
-  {errors.name && <span className="error">{errors.name}</span>}
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          {errors.name && <span className="error">{errors.name}</span>}
 
-  <input
-    type="tel"
-    name="phone"
-    placeholder="Your Phone Number"
-    value={formData.phone}
-    onChange={handleChange}
-  />
-  {errors.phone && <span className="error">{errors.phone}</span>}
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <span className="error">{errors.phone}</span>}
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    value={formData.email}
-    onChange={handleChange}
-  />
-  {errors.email && <span className="error">{errors.email}</span>}
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <span className="error">{errors.email}</span>}
 
-  <button type="submit" className="submit-button">Submit</button>
+          <button type="submit" className="submit-button">Submit</button>
 
-  <p className="disclaimer1">
-    I authorize Urbanrise to contact me via call, SMS, email, or WhatsApp, even if my number is on DND.
-  </p>
-
-  
-</form>
-
+          <p className="disclaimer1">
+            I authorize Urbanrise to contact me via call, SMS, email, or WhatsApp, even if my number is on DND.
+          </p>
+        </form>
       </div>
     </div>
   );
